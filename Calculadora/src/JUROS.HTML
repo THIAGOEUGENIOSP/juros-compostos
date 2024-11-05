@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Juros Compostos com Aportes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Calculadora de Juros Compostos com Aportes</h2>
+    <div class="container">
+        <label for="principal">Valor Principal (P):</label>
+        <input type="number" id="principal" placeholder="Ex: 1000" />
+
+        <label for="rate">Taxa de Juros (% ao ano):</label>
+        <input type="number" id="rate" placeholder="Ex: 5" />
+
+        <label for="time">Período (em anos):</label>
+        <input type="number" id="time" placeholder="Ex: 2" />
+
+        <label for="frequency">Frequência de Capitalização:</label>
+        <select id="frequency">
+            <option value="1">Anual</option>
+            <option value="12">Mensal</option>
+            <option value="4">Trimestral</option>
+            <option value="2">Semestral</option>
+        </select>
+
+        <label for="aporte">Aporte Periódico (PMT):</label>
+        <input type="number" id="aporte" placeholder="Ex: 100" />
+
+        <button onclick="calcularJurosCompostos()">Calcular</button>
+
+        <div id="resultado">
+            <p id="valorInvestido"></p>
+            <p id="montanteFinal"></p>
+            <p id="jurosGanhos"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
